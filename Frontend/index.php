@@ -29,10 +29,14 @@
 
                     if ($page === 'dashboard') {
                         include('./pages/dashboard.php');
-                    } else if ($page === 'archive') {
-                        include('./pages/archive.php');
-                    } else if ($page === 'attendance') { 
+                    } else if ($page === 'attendance') {
                         include('./pages/attendance.php');
+                    } else if ($page === 'violation') { 
+                        include('./pages/violation.php');
+                    } else if ($page === 'rules') {
+                        include('./pages/rules.php');
+                    } else if ($page === 'services') {
+                        include('./pages/services.php');
                     } else {
                         include('./pages/dashboard.php');
                     }

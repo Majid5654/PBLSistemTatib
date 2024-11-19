@@ -4,49 +4,50 @@
 <section id="sidebar">
     <a href="#" class="brand">
         <i class='bx bxs-graduation'></i></i>
-        <span class="text">TatibSystem</span>
+        <span class="text">Tatib</span>
     </a>
     <ul class="side-menu top">
         <li class="<?= $page === 'dashboard' ? 'active' : '' ?>">
             <a href="index.php?page=dashboard">
                 <i class='bx bxs-dashboard' ></i>
-                <span class="text">Home</span>
+                <span class="text">Dashboard</span>
             </a>
-
         </li>
+        
 
         <li class="<?= $page === 'attendance' ? 'active' : '' ?>">
             <a href="index.php?page=attendance">
                 <i class='bx bx-calendar' ></i>
                 <span class="text">Attendance</span>
             </a>
-           
         </li>    
-        <li class="<?= $page === 'archive' ? 'active' : '' ?>">
-            <a href="index.php?page=archive">
-                <i class='bx bx-bookmark'></i></i>
-                <span class="text">Archive</span>
+
+
+        <li class="<?= $page === 'violation' ? 'active' : '' ?>">
+            <a href="index.php?page=violation">
+            <i class='bx bx-error-alt'></i>
+                <span class="text">Violation</span>
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class='bx bxs-doughnut-chart' ></i>
-                <span class="text">Compentation</span>
+
+
+        <li class="<?= $page === 'rules' ? 'active' : '' ?>">
+            <a href="index.php?page=rules">
+            <i class='bx bx-food-menu'></i>
+                <span class="text">Rules</span>
             </a>
         </li>
-        <li>
-            <a href="#">
-                <i class='bx bxs-message-dots' ></i>
-                <span class="text">Message</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
+
+
+        <li class="<?= $page === 'services' ? 'active' : '' ?>">
+            <a href="index.php?page=services">
                 <i class='bx bxs-group' ></i>
                 <span class="text">Services</span>
             </a>
         </li>
     </ul>
+
+
     <ul class="side-menu">
         <li>
             <a href="#">
