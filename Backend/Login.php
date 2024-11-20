@@ -8,17 +8,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     // SQL query to fetch user by email
-    $sql = "SELECT * FROM Users WHERE email = ?";
-    
+    $sql = "SELECT * FROM dbo.Users WHERE LOWER(email) = LOWER(?)";
+
     try {
-        // Prepare and execute the query
+        // Prepare the query
         $stmt = $conn->prepare($sql);
-        $stmt->execute([$email]);
 
-        if ($stmt->rowCount() > 0) {
-            // Fetch the user data
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        // Bind the email parameter to the query
+        $stmt->bindParam(1, $email, PDO::PARAM_STR);
 
+        // Execute the query
+        $stmt->execute();
+
+        // Fetch the user data
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // Check if a user record exists
+        if ($user) {
             // Compare the password directly (since it's plain text)
             if ($password === $user['password']) {
                 echo "Login successful! Welcome, " . htmlspecialchars($user['email']);
