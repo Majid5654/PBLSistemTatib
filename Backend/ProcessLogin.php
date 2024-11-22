@@ -3,12 +3,11 @@
 include('connect.php');  // This will include the connection file
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve email and password from POST data
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     // SQL query to fetch user by email
-    $sql = "SELECT * FROM dbo.Users WHERE LOWER(email) = LOWER(?)";
+    $sql = "SELECT * FROM Users WHERE LOWER(Email) = LOWER(?)";
 
     try {
         // Prepare the query
@@ -26,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Check if a user record exists
         if ($user) {
             // Compare the password directly (since it's plain text)
-            if ($password === $user['password']) {
-                echo "Login successful! Welcome, " . htmlspecialchars($user['email']);
+            if ($password === $user['Password']) {
+                header("Location: ../Frontend/index.php");
             } else {
                 echo "Invalid password.";
             }

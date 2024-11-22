@@ -1,9 +1,9 @@
 <?php
 
-$serverName = "LAPTOP-9JC0I58P"; 
-$database = "PBLSistemTatib";
-$username = ""; 
-$password = ""; 
+$serverName = "localhost"; 
+$database = "SistemTatib";
+$username = "SA"; 
+$password = "Arka@12345"; 
 
 try {
  
@@ -16,6 +16,8 @@ try {
 } catch (PDOException $e) {
     echo "Koneksi gagal: " . $e->getMessage();
 }
+
+
 
 
 ?>
