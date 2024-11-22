@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user) {
             // Compare the password directly (since it's plain text)
             if ($password === $user['password']) {
-                echo "Login successful! Welcome, " . htmlspecialchars($user['email']);
+                header("Location: ../Frontend/index.php");
             } else {
                 echo "Invalid password.";
             }
