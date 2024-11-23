@@ -1,0 +1,28 @@
+<div class="nav">
+    <div class="logo">
+        <i class='bx bxl-codepen'></i>
+        <a href="#">TatibSystem</a>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.php?page=dashboard">Home</a>
+        <a href="index.php?page=violance">Violance</a>
+        <a href="index.php?page=Attendance">Attendance</a>
+        <a href="index.php?page=Services">Services</a>
+        <a href="index.php?page=Rules">Rules</a>
+    </div>
+
+    <div class="right-section">
+
+        <div class="profile">
+            <div class="info">
+                <img src="img/Profile.JPG">
+                <div>
+                    <a href="#">Erwan Majid</a>
+                    <p>Polinema Student</p>
+                </div>
+            </div>
+            <i class='bx bx-chevron-down'></i>
+        </div>
+    </div>
+</div>

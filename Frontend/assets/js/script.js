@@ -91,5 +91,10 @@ new Chart(ctx2, {
             duration: 1000,
             easing: 'easeInOutQuad',
         }
+        
     }
+    
 });
+
+
+
