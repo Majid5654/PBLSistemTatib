@@ -12,3 +12,7 @@
         </ul>
     </div>
 </div>
+
+<div class="content">
+    <img src="./img/banner1.jpeg" alt="">
+</div>

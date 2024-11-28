@@ -1,6 +1,6 @@
 <div class="head-title">
     <div class="left">
-        <h1>Archive</h1>
+        <h1>Violation</h1>
         <ul class="breadcrumb">
             <li>
                 <a href="#">Violation</a>
@@ -11,4 +11,7 @@
             </li>
         </ul>
     </div>
+</div>
+
+<div class="content">
 </div>
