@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<h1>Attendance Page</h1>
-=======
 <div class="head-title">
     <div class="left">
-        <h1>Attendance</h1>
+        <h1>Archive</h1>
         <ul class="breadcrumb">
             <li>
                 <a href="#">Dashboard</a>
@@ -19,4 +16,3 @@
         <span class="text">Download PDF</span>
     </a>
 </div>
->>>>>>> origin/main
