@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Dashboard Design #02 | TatibSystem</title>
 </head>
@@ -83,53 +79,5 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/scriptlogin.js"></script>
 
-=======
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="./assets/css/Dashboard.css">
-	<title>PBLTatibSystem</title>
-</head>
-<body>
-	<!-- SIDEBAR -->
-    <?php
-        include("./components/sidebar.php");
-    ?>
-	<!-- SIDEBAR -->
-
-	<!-- CONTENT -->
-	 
-	<section id="content">
-		<!-- NAVBAR -->
-        <?php
-            include("./components/navbar.php");
-        ?>
-		<!-- NAVBAR -->
-		<main>
-            <?php
-                if (isset($_GET['page'])) {
-                    $page = $_GET['page'];
-
-                    if ($page === 'dashboard') {
-                        include('./pages/dashboard.php');
-                    } else if ($page === 'archive') {
-                        include('./pages/archive.php');
-                    } else if ($page === 'attendance') { 
-                        include('./pages/attendance.php');
-                    } else {
-                        include('./pages/dashboard.php');
-                    }
-                } else {
-                    echo 'Tidak ada page';
-                }
-            ?>
-		</main>
-	</section>
-	<!-- CONTENT -->
-	
-
-	<script src="./assets/js/scriptDashboard.js"></script>
->>>>>>> origin/main
 </body>
 </html>

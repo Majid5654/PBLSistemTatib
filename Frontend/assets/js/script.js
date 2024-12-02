@@ -96,14 +96,5 @@ new Chart(ctx2, {
     
 });
 
-// Find the Violance link
-const violenceLink = document.querySelector('.dropdown');
-
-// Toggle dropdown on click
-violenceLink.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default link behavior
-    this.classList.toggle('active'); // Toggle active class to show/hide dropdown
-});
-
 
 
