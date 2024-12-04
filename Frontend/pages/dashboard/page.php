@@ -1,418 +1,117 @@
-<div class="dashboard">
-    <!-- Learning Progress -->
-    <div class="prog-status">
-        <div class="header">
-            <h4>Learning Progress</h4>
-            <div class="tabs">
-                <a href="#" class="active">1Y</a>
-                <a href="#">6M</a>
-                <a href="#">3M</a>
-            </div>
+<header>
+        <div class="left">
+            <h1>Let's Begin The <span>TatibSystem</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, eaque harum. Nobis ipsam magni labore?
+            </p>
+            <a href="index.php">
+            <i class='bx bxs-hand'></i>
+                <span>Get Started</span>
+            </a>
         </div>
+        <img src="img/Imagen4.png">
+    </header>
 
-        <div class="details">
-            <div class="item">
-                <h2>3.45</h2>
-                <p>Current GPA</p>
+    <h2 class="separator">
+        About Us
+    </h2>
+
+    <div class="sell-nft">
+        <div class="item">
+            <div class="header">
+                <i class='bx bx-wallet-alt'></i>
+                <h5>Connect Wallet</h5>
             </div>
-            <div class="separator"></div>
-            <div class="item">
-                <h2>4.78</h2>
-                <p>Class Average GPA</p>
-            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi ab sunt dolores ex dolor, suscipit
+                fuga sed earum.</p>
         </div>
-
-        <canvas class="prog-chart"></canvas>
+        <div class="item">
+            <div class="header">
+                <i class='bx bx-cart-alt'></i>
+                <h5>NFT Marketplace</h5>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi ab sunt dolores ex dolor, suscipit
+                fuga sed earum.</p>
+        </div>
+        <div class="item">
+            <div class="header">
+                <i class='bx bx-grid-alt'></i>
+                <h5>Launch DApps</h5>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi ab sunt dolores ex dolor, suscipit
+                fuga sed earum.</p>
+        </div>
     </div>
 
-    <!-- Popular Section -->
-    <div class="popular">
+    <div class="services" id="services">
         <div class="header">
-            <h4>Popular</h4>
-            <a href="#"># Data</a>
+            <h3>OUR SERVICES</h3>
+            <p>
+                At AIHUB, our goal is to democratize AI, making it accessible and beneficial for everyone. Join us in
+                creating a smarter, more interconnected world.
+            </p>
         </div>
-        <img src="assets/podcast.jpg" alt="Podcast Image">
-        <div class="audio">
-            <i class='bx bx-podcast'></i>
-            <a href="#">Podcast: Mastering Data Visualization</a>
-        </div>
-        <p>Learn to create compelling visualizations with data.</p>
-        <div class="listen">
-            <div class="author">
-                <img src="assets/profile.png" alt="Author Profile">
-                <div>
-                    <a href="#">Alex</a>
-                    <p>Data Analyst</p>
+
+        <div class="service-items">
+            <div class="item">
+                <div class="title">
+                    <div class="gradient"></div>
                 </div>
-            </div>
-            <button>Listen <i class='bx bx-right-arrow-alt'></i></button>
-        </div>
-    </div>
-
-    <!-- Upcoming Section -->
-    <div class="upcoming">
-        <div class="header">
-            <h4>You may like it</h4>
-            <a href="#">July <i class='bx bx-chevron-down'></i></a>
-        </div>
-
-        <div class="dates">
-            <div class="item">
-                <h5>Mo</h5>
-                <a href="#">12</a>
+                <div class="desc">
+                    <h5>Innovation</h5>
+                    <p>
+                        Access a powerful suite of AI tools designed to optimize your processes and boost efficiency.
+                    </p>
+                </div>
             </div>
             <div class="item active">
-                <h5>Tu</h5>
-                <a href="#">13</a>
-            </div>
-            <div class="item">
-                <h5>We</h5>
-                <a href="#">14</a>
-            </div>
-            <div class="item">
-                <h5>Th</h5>
-                <a href="#">15</a>
-            </div>
-            <div class="item">
-                <h5>Fr</h5>
-                <a href="#">16</a>
-            </div>
-            <div class="item">
-                <h5>Sa</h5>
-                <a href="#">17</a>
-            </div>
-            <div class="item">
-                <h5>Su</h5>
-                <a href="#">18</a>
-            </div>
-        </div>
-
-        <div class="events">
-            <div class="item">
-                <div>
-                    <i class='bx bx-time'></i>
-                    <div class="event-info">
-                        <a href="#">Data Science</a>
-                        <p>10:00-11:30</p>
-                    </div>
+                <div class="title">
+                    <div class="gradient"></div>
                 </div>
-                <i class='bx bx-dots-horizontal-rounded'></i>
+                <div class="desc">
+                    <h5>Expertise</h5>
+                    <p>Receive customized advice and solutions from our AI specialists to elevate your projects.</p>
+                </div>
             </div>
             <div class="item">
-                <div>
-                    <i class='bx bx-time'></i>
-                    <div class="event-info">
-                        <a href="#">Machine Learning</a>
-                        <p>13:30-15:00</p>
-                    </div>
+                <div class="title">
+                    <div class="gradient"></div>
                 </div>
-                <i class='bx bx-dots-horizontal-rounded'></i>
+                <div class="desc">
+                    <h5>Learning</h5>
+                    <p>Utilize a vast array of AI resources, from beginner guides to advanced courses for everyone.</p>
+                </div>
             </div>
             <div class="item">
-                <div>
-                    <i class='bx bx-time'></i>
-                    <div class="event-info">
-                        <a href="#">Beginner Python</a>
-                        <p>11:30-13:00</p>
-                    </div>
+                <div class="title">
+                    <div class="gradient"></div>
                 </div>
-                <i class='bx bx-dots-horizontal-rounded'></i>
-            </div>
-            <div class="item">
-                <div>
-                    <i class='bx bx-time'></i>
-                    <div class="event-info">
-                        <a href="#">Introduction to SQL</a>
-                        <p>10:00-11:30</p>
-                    </div>
+                <div class="desc">
+                    <h5>Network</h5>
+                    <p>Join a dynamic community of AI experts to share ideas and stay updated on trends.
+                    </p>
                 </div>
-                <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
         </div>
     </div>
 
-    <!-- New Content Section -->
-    <div class="carousel">
-        <div class="list">
-            <div class="item">
-                <img src="img/img1.png">
-                <div class="introduce">
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">Aerphone</div>
-                    <div class="des">
-                        <!-- 20 lorem -->
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
-                    </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
-                </div>
-                <div class="detail">
-                    <div class="title">Aerphone GHTK</div>
-                    <div class="des">
-                        <!-- lorem 50 -->
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
-                    </div>
-                    <div class="specifications">
-                        <div>
-                            <p>Used Time</p>
-                            <p>6 hours</p>
-                        </div>
-                        <div>
-                            <p>Charging port</p>
-                            <p>Type-C</p>
-                        </div>
-                        <div>
-                            <p>Compatible</p>
-                            <p>Android</p>
-                        </div>
-                        <div>
-                            <p>Bluetooth</p>
-                            <p>5.3</p>
-                        </div>
-                        <div>
-                            <p>Controlled</p>
-                            <p>Touch</p>
-                        </div>
-                    </div>
-                    <div class="checkout">
-                        <button>ADD TO CART</button>
-                        <button>CHECKOUT</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/img2.png">
-                <div class="introduce">
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">Aerphone</div>
-                    <div class="des">
-                        <!-- 20 lorem -->
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
-                    </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
-                </div>
-                <div class="detail">
-                    <div class="title">Aerphone GHTK</div>
-                    <div class="des">
-                        <!-- lorem 50 -->
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
-                    </div>
-                    <div class="specifications">
-                        <div>
-                            <p>Used Time</p>
-                            <p>6 hours</p>
-                        </div>
-                        <div>
-                            <p>Charging port</p>
-                            <p>Type-C</p>
-                        </div>
-                        <div>
-                            <p>Compatible</p>
-                            <p>Android</p>
-                        </div>
-                        <div>
-                            <p>Bluetooth</p>
-                            <p>5.3</p>
-                        </div>
-                        <div>
-                            <p>Controlled</p>
-                            <p>Touch</p>
-                        </div>
-                    </div>
-                    <div class="checkout">
-                        <button>ADD TO CART</button>
-                        <button>CHECKOUT</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/img3.png">
-                <div class="introduce">
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">Aerphone</div>
-                    <div class="des">
-                        <!-- 20 lorem -->
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
-                    </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
-                </div>
-                <div class="detail">
-                    <div class="title">Aerphone GHTK</div>
-                    <div class="des">
-                        <!-- lorem 50 -->
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
-                    </div>
-                    <div class="specifications">
-                        <div>
-                            <p>Used Time</p>
-                            <p>6 hours</p>
-                        </div>
-                        <div>
-                            <p>Charging port</p>
-                            <p>Type-C</p>
-                        </div>
-                        <div>
-                            <p>Compatible</p>
-                            <p>Android</p>
-                        </div>
-                        <div>
-                            <p>Bluetooth</p>
-                            <p>5.3</p>
-                        </div>
-                        <div>
-                            <p>Controlled</p>
-                            <p>Touch</p>
-                        </div>
-                    </div>
-                    <div class="checkout">
-                        <button>ADD TO CART</button>
-                        <button>CHECKOUT</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/img4.png">
-                <div class="introduce">
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">Aerphone</div>
-                    <div class="des">
-                        <!-- 20 lorem -->
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
-                    </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
-                </div>
-                <div class="detail">
-                    <div class="title">Aerphone GHTK</div>
-                    <div class="des">
-                        <!-- lorem 50 -->
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
-                    </div>
-                    <div class="specifications">
-                        <div>
-                            <p>Used Time</p>
-                            <p>6 hours</p>
-                        </div>
-                        <div>
-                            <p>Charging port</p>
-                            <p>Type-C</p>
-                        </div>
-                        <div>
-                            <p>Compatible</p>
-                            <p>Android</p>
-                        </div>
-                        <div>
-                            <p>Bluetooth</p>
-                            <p>5.3</p>
-                        </div>
-                        <div>
-                            <p>Controlled</p>
-                            <p>Touch</p>
-                        </div>
-                    </div>
-                    <div class="checkout">
-                        <button>ADD TO CART</button>
-                        <button>CHECKOUT</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/img5.png">
-                <div class="introduce">
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">Aerphone</div>
-                    <div class="des">
-                        <!-- 20 lorem -->
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
-                    </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
-                </div>
-                <div class="detail">
-                    <div class="title">Aerphone GHTK</div>
-                    <div class="des">
-                        <!-- lorem 50 -->
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
-                    </div>
-                    <div class="specifications">
-                        <div>
-                            <p>Used Time</p>
-                            <p>6 hours</p>
-                        </div>
-                        <div>
-                            <p>Charging port</p>
-                            <p>Type-C</p>
-                        </div>
-                        <div>
-                            <p>Compatible</p>
-                            <p>Android</p>
-                        </div>
-                        <div>
-                            <p>Bluetooth</p>
-                            <p>5.3</p>
-                        </div>
-                        <div>
-                            <p>Controlled</p>
-                            <p>Touch</p>
-                        </div>
-                    </div>
-                    <div class="checkout">
-                        <button>ADD TO CART</button>
-                        <button>CHECKOUT</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="img/img6.png">
-                <div class="introduce">
-                    <div class="title">DESIGN SLIDER</div>
-                    <div class="topic">Aerphone</div>
-                    <div class="des">
-                        <!-- 20 lorem -->
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, laborum cumque dignissimos quidem atque et eligendi aperiam voluptates beatae maxime.
-                    </div>
-                    <button class="seeMore">SEE MORE &#8599</button>
-                </div>
-                <div class="detail">
-                    <div class="title">Aerphone GHTK</div>
-                    <div class="des">
-                        <!-- lorem 50 -->
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, reiciendis suscipit nobis nulla animi, modi explicabo quod corrupti impedit illo, accusantium in eaque nam quia adipisci aut distinctio porro eligendi. Reprehenderit nostrum consequuntur ea! Accusamus architecto dolores modi ducimus facilis quas voluptatibus! Tempora ratione accusantium magnam nulla tenetur autem beatae.
-                    </div>
-                    <div class="specifications">
-                        <div>
-                            <p>Used Time</p>
-                            <p>6 hours</p>
-                        </div>
-                        <div>
-                            <p>Charging port</p>
-                            <p>Type-C</p>
-                        </div>
-                        <div>
-                            <p>Compatible</p>
-                            <p>Android</p>
-                        </div>
-                        <div>
-                            <p>Bluetooth</p>
-                            <p>5.3</p>
-                        </div>
-                        <div>
-                            <p>Controlled</p>
-                            <p>Touch</p>
-                        </div>
-                    </div>
-                    <div class="checkout">
-                        <button>ADD TO CART</button>
-                        <button>CHECKOUT</button>
-                    </div>
-                </div>
+    <div class="showcase" id="aihub">
+        <h3>MEET THE TEAM</h3>
+        <div class="text-sec">
+            <p>
+                Immerse yourself in the world of Artificial Intelligence with AIHUB. Whether you are a seasoned
+                professional, an avid enthusiast, or a business looking to integrate AI, AIHUB offers the tools and
+                resources you need.
+            </p>
+            <div class="images">
+                <img src="img/Imagen1.png">
+                <img src="assets/img-2.JPG">
+                <img src="assets/img-3.JPG">
             </div>
         </div>
-        <div class="arrows">
-            <button id="prev"><</button>
-            <button id="next">></button>
-            <button id="back">See All  &#8599</button>
+        <div class="image-sec">
+            <img src="assets/img-4.JPG">
+            <img src="assets/img-5.JPG">
+            <img src="assets/img-6.JPG">
         </div>
     </div>
+

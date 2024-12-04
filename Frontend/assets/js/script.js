@@ -5,6 +5,7 @@ new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+        
         datasets: [{
             label: 'Time',
             data: [8, 6, 7, 6, 10, 8, 4],
@@ -29,9 +30,10 @@ new Chart(ctx, {
             },
             y: {
                 ticks: {
-                    display: false
+                    display: false,
+                    color: '#f1f3f2'
                 }
-            }
+            },
         },
         plugins: {
             legend: {
@@ -45,56 +47,37 @@ new Chart(ctx, {
     }
 });
 
-new Chart(ctx2, {
-    type: 'line',
-    data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-        datasets: [{
-            label: 'Class GPA',
-            data: [6, 10, 8, 14, 6, 7, 4],
-            borderColor: '#0891b2',
-            tension: 0.4
-        },
-        {
-            label: 'Aver GPA',
-            data: [8, 6, 7, 6, 11, 8, 10],
-            borderColor: '#ca8a04',
-            tension: 0.4
-        }
-        ]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        scales: {
-            x: {
-                grid: {
-                    display: false,
-                }
-            },
-            y: {
-                ticks: {
-                    display: false
-                },
-                border: {
-                    display: false,
-                    dash: [5, 5]
-                }
-            }
-        },
-        plugins: {
-            legend: {
-                display: false
-            }
-        },
-        animation: {
-            duration: 1000,
-            easing: 'easeInOutQuad',
-        }
-        
-    }
-    
+
+// Find the Violance link
+const violenceLink = document.querySelector('.dropdown');
+
+// Toggle dropdown on click
+violenceLink.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    this.classList.toggle('active'); // Toggle active class to show/hide dropdown
 });
+
+document.getElementById('exportPDF').addEventListener('click', function () {
+    const { jsPDF } = window.jspdf; // Import jsPDF
+    const doc = new jsPDF(); // Create a new PDF document
+
+    // Add title to the PDF
+    doc.setFontSize(18);
+    doc.text("Attendance Sheet", 14, 15);
+
+    // Export the table as PDF
+    doc.autoTable({
+        html: '.table', // Select the table
+        startY: 20, // Start position on the Y-axis
+        theme: 'striped', // Table styling
+        headStyles: { fillColor: [76, 110, 245] }, // Header background color
+    });
+
+    // Save the PDF with a custom name
+    doc.save('Attendance_Sheet.pdf');
+});
+
+
 
 
 
