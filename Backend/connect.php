@@ -1,5 +1,4 @@
 <?php
-
 $serverName = "LAPTOP-9JC0I58P"; 
 $database = "PBLSistemTatib";
 $username = ""; 
@@ -19,4 +18,3 @@ try {
 
 
 ?>
-

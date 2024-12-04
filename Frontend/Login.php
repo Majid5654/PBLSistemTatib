@@ -1,3 +1,7 @@
+<?php
+    include "../Backend/connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,24 +17,12 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="register.php" method="POST">
-                <h1>Create Account</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
+            
+            
         </div>
         <div class="form-container sign-in">
-            <form action="../Backend/Login.php" method="POST">
+            <form action="../Backend/ProcessLogin.php" method="POST">
                 <h1>Sign In</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                </div>
                 <span>or use your email password</span>
                 <input type="email" id="email" name="email" placeholder="Email" required>
                 <input type="password" id="password" name="password" placeholder="Password" required>
@@ -47,13 +39,11 @@
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Hello, Students!</h1>
-                    <p>Register with your personal details to use all of the experience</p>
-                    <button class="hidden" id="register">Sign Up</button>
+                    <p>Enter your personal details to use all of the site's features</p>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 
