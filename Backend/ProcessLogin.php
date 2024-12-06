@@ -17,15 +17,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user) {
             //proses verif password
             if ($password === $user['Password']) { // Ganti dengan password_hash jika terenkripsi
-                $_SESSION['username'] = $user['Username']; // Perbaiki penempatan variabel
+                $_SESSION['username'] = $user['Username']; 
                 $_SESSION['level'] = $user['Level'];
 
                 //Mengarahkan sesuai level
                 if ($user['Level'] === 'student') {
-                    header("Location: ../Frontend/index.php");
+                    header("Location: ../Frontend/Mahasiswa/indexMahasiswa.php");
+                    exit();
+                } elseif ($user['Level'] === 'dosen') {
+                    header("Location: ../Frontend/Dosen/indexDosen.php");
                     exit();
                 } elseif ($user['Level'] === 'admin') {
-                    header("Location: ../Backend/index.php");
+                    header("Location: ../Frontend/Admin/indexAdmin.php");
                     exit();
                 }
             } else {

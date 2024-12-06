@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: ../Login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,6 +90,11 @@
     <?php
             include('./components/footerMahasiswa.php');
         ?>
+    <div class="footer">
+    <a href="../../Backend/Logout.php" class="btn btn-danger">Logout</a>
+
+</div>
+
     </div>
 
 
