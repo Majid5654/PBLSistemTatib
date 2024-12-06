@@ -46,9 +46,6 @@
             color: inherit; /* Use the same color as text */
         }
 
-        a:hover {
-         
-        }
         .logo{
             color: #fff;
         }
