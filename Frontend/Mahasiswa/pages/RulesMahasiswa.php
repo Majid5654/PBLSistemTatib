@@ -31,7 +31,7 @@
     
     
     <?php
-        include('../Backend/Connect.php'); // Pastikan path ke Connect.php benar
+        include('../../Backend/Connect.php'); // Pastikan path ke Connect.php benar
         
         try {
             
@@ -39,6 +39,7 @@
 
             // Eksekusi query
             $result = $conn->query($query)->fetchAll(PDO::FETCH_ASSOC);
+            
         } catch (PDOException $e) {
             die("Error fetching data: " . $e->getMessage());
         }
