@@ -11,15 +11,16 @@
 
 <body>
     <div class="container" id="container">
-        
         <div class="form-container sign-up">
-            
+        <form id="forgot-password-form">
             <form action="../Backend/forgotPassword.php" method="POST">
             <h1>Forgot Password</h1>
             <span>Enter your email to receive a verification code</span>
-            <input type="email" id="forgot-email" name="forgot-email" placeholder="Email" required>
-            <button type="submit">Send Code</button>
-            <a href="#" id="back-to-login">Back to Sign In</a>
+        <input type="email" id="forgot-email" name="forgot-email" placeholder="Email" required>
+        
+        <p id="error-message" style="color: red; display: none;"></p>
+        <button type="submit">Send Code</button>
+        
         </form>
         </div>
 
@@ -27,7 +28,7 @@
         <div class="form-container sign-in">
             <form action="../Backend/ProcessLogin.php" method="POST">
                 <h1>Sign In</h1>
-                <span>or use your email password</span>
+                
                 <input type="email" id="email" name="email" placeholder="Email" required>
                 <input type="password" id="password" name="password" placeholder="Password" required>
                 <button type="submit">Sign In</button>
@@ -95,6 +96,40 @@
         });
     </script>
     
+    <script>
+        $(document).ready(function () {
+            $('#forgot-password-form').on('submit', function (e) {
+                e.preventDefault(); // Mencegah submit form default
+
+                // Ambil nilai email dari form
+                const email = $('#forgot-email').val();
+                const errorMessage = $('#error-message');
+
+                // Kirim permintaan AJAX
+                $.ajax({
+                    url: '../Backend/forgotPassword.php', // Endpoint backend
+                    type: 'POST',
+                    data: { 'forgot-email': email },
+                    dataType: 'json', // Harapkan respons JSON
+                    success: function (response) {
+                        if (response.success) {
+                            // Reset pesan error jika ada
+                            errorMessage.hide();
+                            alert(response.message); // Tampilkan pesan sukses
+                        } else {
+                            // Tampilkan pesan error di bawah email
+                            errorMessage.text(response.message).show();
+                        }
+                    },
+                    error: function () {
+                        // Tampilkan error jika AJAX gagal
+                        errorMessage.text('An error occurred. Please try again.').show();
+                    }
+                });
+            });
+        });
+    </script>
+
     <script src="./Mahasiswa/assets/js/forgotPassword.js"></script>
     <script src="./assets/js/scriptlogin.js"></script>
 
