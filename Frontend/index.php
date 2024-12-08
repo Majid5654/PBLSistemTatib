@@ -59,7 +59,7 @@
 
                 if ($page === 'dashboard') {
                 } else if ($page === 'Services') {
-                    include('./pages/Services.php');
+                    include('./pages/service.php');
                 }
             } else {     
             }

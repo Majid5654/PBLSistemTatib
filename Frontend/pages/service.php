@@ -1,6 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
 
-
-<style>
+<head>
+    <!-- Your existing head content -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style></style>
+    <style>
         .form {
             display: flex;
             justify-content: center;
@@ -12,12 +17,15 @@
         .card {
             justify-content: center;
             width: 100%;
-            max-width: 800px; /* Reduced width for better focus */
-            background: #f8f9fa; /* Light gray background for the card */
+            max-width: 800px;
+            /* Reduced width for better focus */
+            background: #f8f9fa;
+            /* Light gray background for the card */
             border: none;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            padding: 30px; /* Added padding for better spacing */
+            padding: 30px;
+            /* Added padding for better spacing */
         }
 
         .card-title {
@@ -43,15 +51,21 @@
         }
 
         a {
-            text-decoration: none; /* Remove underline from all links */
-            color: inherit; /* Use the same color as text */
+            text-decoration: none;
+            /* Remove underline from all links */
+            color: inherit;
+            /* Use the same color as text */
         }
 
-        .logo{
+        .logo {
             color: #fff;
         }
     </style>
-</head>
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    </head>
+
 <body>
     <div class="form">
         <div class="card">
@@ -65,10 +79,6 @@
                     <div class="mb-3">
                         <label for="nim" class="form-label">NIM</label>
                         <input type="text" class="form-control" id="nim" name="nim" placeholder="Enter your NIM" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="mb-3">
                         <label for="subject" class="form-label">Subject</label>
@@ -86,14 +96,28 @@
                         <button type="submit" class="btn btn-custom btn-lg">Submit Ticket</button>
                     </div>
                 </form>
+
+                <?php
+                if (isset($_GET['status'])) {
+                    if ($_GET['status'] === 'success' && isset($_GET['ticket_id'])) {
+                        echo '<div class="text-center mt-4">
+                                <i class="bi bi-check-circle-fill" style="color: green; font-size: 2rem;"></i>
+                                <h3 style="color: green;">Ticket #' . htmlspecialchars($_GET['ticket_id']) . ' has been successfully submitted.</h3>
+                              </div>';
+                    } elseif ($_GET['status'] === 'error') {
+                        echo '<div class="text-center mt-4">
+                                <i class="bi bi-x-circle-fill" style="color: red; font-size: 2rem;"></i>
+                                <h3 style="color: red;">Failed to send the ticket. Please try again.</h3>
+                              </div>';
+                    }
+                }
+                ?>
+
             </div>
         </div>
     </div>
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"> </script>
 </body>
+
 </html>
-
-=======
-<h1>Services Page</h1>
-
