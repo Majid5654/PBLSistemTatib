@@ -19,7 +19,6 @@
             <span>Enter your email to receive a verification code</span>
             <input type="email" id="forgot-email" name="forgot-email" placeholder="Email" required>
             <button type="submit">Send Code</button>
-            <a href="#" id="back-to-login">Back to Sign In</a>
         </form>
         </div>
 
@@ -27,7 +26,7 @@
         <div class="form-container sign-in">
             <form action="../Backend/ProcessLogin.php" method="POST">
                 <h1>Sign In</h1>
-                <span>or use your email password</span>
+                
                 <input type="email" id="email" name="email" placeholder="Email" required>
                 <input type="password" id="password" name="password" placeholder="Password" required>
                 <button type="submit">Sign In</button>
