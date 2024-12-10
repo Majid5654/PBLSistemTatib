@@ -1,5 +1,4 @@
 <?php
-
 $serverName = "localhost"; 
 $database = "SistemTatib";
 $username = "SA"; 
@@ -18,7 +17,4 @@ try {
 }
 
 
-
-
 ?>
-

@@ -1,32 +1,33 @@
 <?php
-// Include the database connection
-include('connect.php');  // This will include the connection file
+include('connect.php');  
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // SQL query to fetch user by email
     $sql = "SELECT * FROM Users WHERE LOWER(Email) = LOWER(?)";
 
     try {
-        // Prepare the query
         $stmt = $conn->prepare($sql);
-
-        // Bind the email parameter to the query
         $stmt->bindParam(1, $email, PDO::PARAM_STR);
-
-        // Execute the query
         $stmt->execute();
-
-        // Fetch the user data
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // Check if a user record exists
         if ($user) {
-            // Compare the password directly (since it's plain text)
-            if ($password === $user['Password']) {
-                header("Location: ../Frontend/index.php");
+            //proses verif password
+            if ($password === $user['Password']) { // Ganti dengan password_hash jika terenkripsi
+                $_SESSION['username'] = $user['Username']; // Perbaiki penempatan variabel
+                $_SESSION['level'] = $user['Level'];
+
+                //Mengarahkan sesuai level
+                if ($user['Level'] === 'student') {
+                    header("Location: ../Frontend/index.php");
+                    exit();
+                } elseif ($user['Level'] === 'admin') {
+                    header("Location: ../Backend/index.php");
+                    exit();
+                }
             } else {
                 echo "Invalid password.";
             }

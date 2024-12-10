@@ -1,20 +1,20 @@
 <div class="nav">
     <div class="logo">
         <i class='bx bxl-codepen'></i>
-        <a href="#">TatibSystem</a>
+        <a href="#">XABER</a>
     </div>
     <div class="nav-links">
-        <a href="index.php?page=dashboard">Home</a>
+        <a href="indexDosen.php?page=dashboard">Home</a>
         <div class="dropdown">
-            <a href="index.php?page=violance">Violance</a>
+            <a href="indexDosen.php?page=violance">Violance</a>
             <div class="dropdown-menu">
-                <a href="index.php?page=violance-sub1">Sub-link 1</a>
-                <a href="index.php?page=violance-sub2">Sub-link 2</a>
+                <a href="indexDosen.php?page=violance-sub1">Sub-link 1</a>
+                <a href="indexMDosen.php?page=violance-sub2">Sub-link 2</a>
             </div>
         </div>
-        <a href="index.php?page=Attendance">Attendance</a>
-        <a href="index.php?page=Services">Services</a>
-        <a href="index.php?page=Rules">Rules</a>
+        <a href="indexDosen.php?page=Attendance">Attendance</a>
+        <a href="indexDosen.php?page=Services">Services</a>
+        <a href="indexDosen.php?page=Rules">Rules</a>
     </div>
     <div class="right-section">
         <div class="profile">
@@ -22,7 +22,7 @@
                 <img src="img/Profile.JPG">
                 <div>
                     <a href="#">Erwan Majid</a>
-                    <p>Polinema Student</p>
+                    <p>Lecturer</p>
                 </div>
             </div>
             <i class='bx bx-chevron-down'></i>
