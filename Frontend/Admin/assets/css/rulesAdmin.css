@@ -1,0 +1,60 @@
+
+header .left {
+    width: 700px;
+}
+
+header .left h1 {
+    font-size: 60px;
+}
+
+header .left h1 span {
+    color: #1e293b;
+}
+
+header .left p {
+    margin: 40px 0;
+    color: #666;
+}
+
+#download-icon {
+    color: rgb(25, 25, 25);
+}
+
+header .left a {
+    display: flex;
+    align-items: center;
+    background: #031224;
+    width: 200px;
+    padding: 8px;
+    border-radius: 60px;
+    margin-top: auto;
+}
+
+header .left a i {
+    background-color: #fff;
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+header .left a span {
+    color: #fff;
+    margin-left: 10px;
+}
+
+header .left p {
+    margin-top: 100px; /* Adjust this value to fine-tune the position */
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.left {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}

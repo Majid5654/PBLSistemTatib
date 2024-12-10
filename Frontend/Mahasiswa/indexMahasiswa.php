@@ -12,25 +12,10 @@
 <body>
 
     <div class="top-container">
-
         <?php
             include('./components/navbarMahasiswa.php');
         ?>
-
-        <?php
-            if (isset($_GET['page'])) {
-                $page = $_GET['page'];
-
-                if ($page == 'dashboard') {
-                    include('./pages/dashboard/statusMahasiswa.php');
-                }
-            } else {
-                include('./pages/dashboard/statusMahasiswa.php');
-            }
-        ?>
     </div>
-
-   
 
     <div class="header">
         <?php
@@ -51,17 +36,8 @@
                 $page = $_GET['page'];
 
                 if ($page === 'dashboard') {
-                } else if ($page === 'Attendance') {
-                    include('./pages/AttendanceMahasiswa.php');
-                }
-            } else {
-            }
-            if (isset($_GET['page'])) {
-                $page = $_GET['page'];
-
-                if ($page === 'dashboard') {
-                } else if ($page === 'Services') {
-                    include('./pages/ServicesMahasiswa.php');
+                } else if ($page === 'Compensation') {
+                    include('./pages/CompensationMahasiswa.php');
                 }
             } else {     
             }
@@ -71,6 +47,24 @@
                 if ($page === 'dashboard') {
                 } else if ($page === 'Rules') {
                     include('./pages/RulesMahasiswa.php');
+                }
+            } else {    
+            }
+            if (isset($_GET['page'])) {
+                $page = $_GET['page'];
+
+                if ($page === 'dashboard') {
+                } else if ($page === 'Setting') {
+                    include('./pages/SettingMahasiswa.php');
+                }
+            } else {    
+            }
+            if (isset($_GET['page'])) {
+                $page = $_GET['page'];
+
+                if ($page === 'dashboard') {
+                } else if ($page === 'Service') {
+                    include('./pages/ServicesMahasiswa.php');
                 }
             } else {    
             }
@@ -87,10 +81,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./assets/js/scriptMahasiswa.js"></script>
-    <script src="./assets/js/scriptlogin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-
-
 </body>
 </html>

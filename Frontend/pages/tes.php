@@ -1,6 +1,6 @@
 <?php
 // Include PHPMailer
-require '../../../vendor/autoload.php'; // Update the path to your PHPMailer autoload file
+require '../../vendor/autoload.php'; // Update the path to your PHPMailer autoload file
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -13,10 +13,9 @@ $name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : null;
 $nim = isset($_POST['nim']) ? htmlspecialchars($_POST['nim']) : null;
 $subject = isset($_POST['subject']) ? htmlspecialchars($_POST['subject']) : null;
 $message = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : null;
-$email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : null;
 
 // Check if the required fields are provided
-if (!$name || !$nim || !$subject || !$message || !$email) {
+if (!$name || !$nim || !$subject || !$message) {
     $response['message'] = 'Missing required fields';
     echo json_encode($response);
     exit;
@@ -38,11 +37,6 @@ try {
     $mail->setFrom('majiderwan14@gmail.com', 'Customer Service'); // Replace with your email
     $mail->addAddress('majiderwan14@gmail.com'); // Replace with recipient email
 
-    // Attach file directly from the request if provided
-    if (isset($_FILES['attachment']) && $_FILES['attachment']['error'] == 0) {
-        $mail->addAttachment($_FILES['attachment']['tmp_name'], $_FILES['attachment']['name']);
-    }
-
     // Content
     $mail->isHTML(true);
     $mail->Subject = 'New Ticket Submission: ' . $subject;
@@ -50,7 +44,6 @@ try {
         <h3>New Ticket Submitted</h3>
         <p><strong>Name:</strong> $name</p>
         <p><strong>NIM:</strong> $nim</p>
-        <p><strong>Email:</strong> $email</p>
         <p><strong>Subject:</strong> $subject</p>
         <p><strong>Message:</strong> $message</p>
     ";
@@ -58,10 +51,9 @@ try {
     // Send email
     $mail->send();
 
-    // Return success response with Gmail link
+    // Return success response
     $response['status'] = 'success';
     $response['message'] = 'Ticket submitted and email sent successfully.';
-    $response['gmail_link'] = 'https://mail.google.com/mail/u/0/#sent'; // Gmail "Sent" folder link
 } catch (Exception $e) {
     // Handle email errors
     $response['message'] = 'Email error: ' . $mail->ErrorInfo;

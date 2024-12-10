@@ -1,6 +1,6 @@
 <?php
 // Include PHPMailer
-require '../../../vendor/autoload.php'; // Update the path to your PHPMailer autoload file
+require '../../vendor/autoload.php'; // Update the path to your PHPMailer autoload file
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
