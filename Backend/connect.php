@@ -1,5 +1,5 @@
 <?php
-$serverName = "LAPTOP-9JC0I58P"; 
+$serverName = "LAPTOP-K0OT1TN6"; 
 $database = "PBLSistemTatib";
 $username = ""; 
 $password = ""; 

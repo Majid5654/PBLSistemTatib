@@ -227,19 +227,3 @@ body{
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
-
-#forgot-password-link {
-    color: #007bff;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-
-.forgot-password {
-    display: none;  /* Awalnya tersembunyi */
-}
-
-.sign-in {
-    display: block;  /* Awalnya tampil */
-}
-
