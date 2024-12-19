@@ -87,10 +87,15 @@ try {
                 <td><?= $row["Verifikasi"] ? htmlspecialchars($row["Sanksi"]) : "Not Verified" ?></td>
                 <td>
                     <!-- Tombol Aksi -->
-                    <a class="btn btn-primary btn-sm" href="../Admin/pages/Violance/editAdmin.php?id=<?= $row["ID"] ?>">Edit</a>
+                    <?php if ($row["Verifikasi"] == 0): ?>
+                        <a class="btn btn-primary" href="../Admin/pages/violance/editAdmin.php?id=<?= $row["ID"] ?>">Edit</a>
+                        
+                    <?php else: ?>
+                       
+                    <?php endif; ?>
                     <a class="btn btn-primary btn-sm" href="../Admin/pages/Violance/deleteAdmin.php?id=<?= $row["ID"] ?>">Hapus</a>
                     
-                    
+
                     <?php if (!$row["Verifikasi"]): ?>
                         <form action="/PBLTatib/PBLSistemTatib/Frontend/Admin/pages/Violance/verify.php" method="POST" enctype="multipart/form-data" style="display: inline-block;">
                             <input type="hidden" name="id" value="<?= $row["ID"] ?>">

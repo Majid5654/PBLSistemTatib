@@ -163,7 +163,7 @@ include('../../Backend/connect.php');
     <div class="nav-links">
         <a href="indexAdmin.php?page=dashboard">Home</a>
         <a href="indexAdmin.php?page=violance">Violance</a>
-        <a href="indexAdmin.php?page=CreateUser">CreateUser</a>
+        <a href="indexAdmin.php?page=CreateUser">UserSetting</a>
         <a href="indexAdmin.php?page=Services">Services</a>
         <a href="indexAdmin.php?page=Rules">Rules</a>
     </div>

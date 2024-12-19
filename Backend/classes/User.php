@@ -79,21 +79,30 @@ class User extends Database {
         }
     }
 
-    public function updatePasswordWithoutHash($email, $newPassword) {
-    try {
-        $conn = $this->connect(); // Dapatkan koneksi dari kelas Database
-        $sql = "UPDATE Users SET Password = :password WHERE Email = :email";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':password', $newPassword, PDO::PARAM_STR);
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-
-        return $stmt->execute(); // Jalankan query dan kembalikan hasil
-    } catch (PDOException $e) {
-        // Tangani kesalahan database jika ada
-        error_log("Database Error: " . $e->getMessage());
-        return false;
+    public function updatePassword($email, $newPassword) {
+        try {
+            $conn = $this->connect();
+            $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+    
+            $sql = "UPDATE Users SET Password = :password WHERE Email = :email";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':password', $hashedPassword, PDO::PARAM_STR);
+            $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+    
+            if (!$stmt->execute()) {
+                $errorInfo = $stmt->errorInfo();
+                error_log("SQL Error: " . print_r($errorInfo, true));
+                return false;
+            }
+    
+            return true;
+        } catch (PDOException $e) {
+            error_log("Database Error: " . $e->getMessage());
+            return false;
+        }
     }
 }
 
-}
+    
+
 ?>

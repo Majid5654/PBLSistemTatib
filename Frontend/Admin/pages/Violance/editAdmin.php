@@ -39,7 +39,7 @@ if (!$mahasiswa) {
     </head>
     <body>
         <div class="container mt-4">
-            <h2>Edit Data Mahasiswa</h2>
+            <h2>Edit Student Violance</h2>
 
             <form action="proccessAdmin.php?aksi=edit" method="post">
                 <input type="hidden" name="ID" value="<?= $mahasiswa['ID'] ?>">

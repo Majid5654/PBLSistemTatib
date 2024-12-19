@@ -83,7 +83,7 @@ if ($_GET['aksi'] === 'edit') {
         $stmt->bindParam(':jenis_pelanggaran', $jenis_pelanggaran);
 
         if ($stmt->execute()) {
-            header("Location: /PBLSistemTatib/Frontend/Dosen/indexDosen.php?page=violance");
+            header("Location: /PBLTatib/PBLSistemTatib/Frontend/DPA/indexDPA.php?page=violance");
             exit;
         } else {
             throw new Exception("Failed to update data.");

@@ -1,41 +1,37 @@
 <?php
 session_start();
-require_once '../../../Backend/classes/Database.php'; // Pastikan class User Anda tersedia
-require_once '../../../Backend/classes/User.php'; // Pastikan file User sudah benar
+require_once '../../../Backend/classes/User.php';
 
-echo "HALO";
-// Pastikan pengguna telah login
+// Ensure the user is logged in
 if (!isset($_SESSION['nama'])) {
     header("Location: ../../../Frontend/Login.php");
     exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Ambil data dari form
-    $userId = $_SESSION['email']; // ID pengguna dari sesi
+    // Get user ID and new password from the form
+    $userId = $_SESSION['email']; // ID from session
     $newPassword = $_POST['password'];
 
-    // Validasi panjang password baru (opsional)
+    // Validate password length (optional)
     if (strlen($newPassword) < 8) {
         $_SESSION['error'] = "Password must be at least 8 characters.";
         header("Location: changeMahasiswa.php");
         exit;
     }
 
-    // Instance User class
+    // Create User object to interact with the database
     $user = new User();
 
-    // Update password di database (tanpa hashing)
-    if ($user->updatePasswordWithoutHash($userId, $newPassword)) {
-        $_SESSION['success'] = "Password successfully updated.";
-        header("Location: /PBLTatib/PBLSistemTatib/Frontend/Mahasiswa/indexMahasiswa.php?page=dashboard"); // Redirect ke halaman sukses
+    // Update password using the updatePassword method
+    if ($user->updatePassword($userId, $newPassword)) {
+        $_SESSION['message'] = "Password successfully updated.";
+        header("Location: /PBLTatib/PBLSistemTatib/Frontend/Mahasiswa/indexMahasiswa.php?page=dashboard"); // Redirect to success page
         exit;
     } else {
-        $_SESSION['error'] = "Failed to update password. Please try again.";
-        header("Location: contact.php");
-        exit;
+        $_SESSION['message'] = "Failed to update password. Please try again.";
+        header("Location: SettingMahasiswa.php"); // Redirect back to change page
+        exit;   
     }
-    
-
 }
 ?>

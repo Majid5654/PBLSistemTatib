@@ -123,55 +123,58 @@
 }
 
 </style>
-    <div class="hero">
-        <div class="left-section">
-            <div class="top">
-                <h2>Change Your Password</h2>
-                <p>
-                    Design and code beautifully simple projects without overwhelming yourself with complexity. Enjoy
-                    your passion for creating with ease and love.
-                </p>
 
-                <!-- New Form Section -->
-                <form action="pages/changeDosen.php" method="post" class="contact-form" onsubmit="return validatePassword()">
-                    <input type="text" id="password" name="Password" placeholder="New Password" required>
-                    <span id="error-message" style="color: red; font-size: 14px;"></span>
-                    <button type="submit" class="form-submit">Submit</button>
-                </form>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-            </div>
-            <div class="bottom">
-                <div class="icons">
-                    <i class="ri-youtube-line"></i>
-                    <i class="ri-twitter-x-line"></i>
-                    <i class="ri-linkedin-box-line"></i>
-                    <i class="ri-instagram-line"></i>
-                </div>
+<div class="hero">
+    <div class="left-section">
+        <div class="top">
+            <h2>Change Your Password</h2>
+            <p>
+                Design and code beautifully simple projects without overwhelming yourself with complexity. Enjoy
+                your
+                passion for creating with ease and love.
+            </p>
+
+            <!-- New Form Section -->
+            <form action="/PBLTatib/PBLSistemTatib/Frontend/Dosen/pages/changeDosen.php" method="post" class="contact-form" id="passwordChangeForm">
+                <input type="text" name="password" placeholder="New Password" required id="newPassword">
+                <span id="passwordError" class="text-danger" style="display: none;">Password must be at least 8 characters and include letters and numbers.</span>
+                <button type="submit" class="form-submit">Submit</button>
+            </form>
+
+           
+        </div>
+        <div class="bottom">
+            <div class="icons">
+                <i class="ri-youtube-line"></i>
+                <i class="ri-twitter-x-line"></i>
+                <i class="ri-linkedin-box-line"></i>
+                <i class="ri-instagram-line"></i>
             </div>
         </div>
-
-        <img src="img/Desk.png" alt="Desk">
     </div>
 
-    <script>
-        function validatePassword() {
-            const passwordInput = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
+    <img src="img/Desk.png">
+</div>
+<script>
+    $(document).ready(function() {
+        $('#passwordChangeForm').submit(function(event) {
+            // Prevent form submission
+            event.preventDefault();
+            
+            // Validate password
+            var password = $('#newPassword').val();
+            var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-            // Check if password is at least 8 characters long
-            if (passwordInput.length < 8) {
-                errorMessage.textContent = "Password must be at least 8 characters long.";
-                return false; // Prevent form submission
+            if (!regex.test(password)) {
+                $('#passwordError').show();
+            } else {
+                $('#passwordError').hide();
+                // Submit form via AJAX or regular form submission
+                this.submit();
             }
-
-            // Check if password contains at least one number
-            if (!/\d/.test(passwordInput)) {
-                errorMessage.textContent = "Password must contain numbers.";
-                return false; // Prevent form submission
-            }
-
-            errorMessage.textContent = ""; // Clear error message
-            return true; // Allow form submission
-        }
-    </script>
+        });
+    });
+</script>
 

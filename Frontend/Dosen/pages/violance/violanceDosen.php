@@ -87,10 +87,13 @@
                 </td>
 
                 <td>
-                    
-                    <a class="btn btn-primary" href="../Dosen/pages/violance/editDosen.php?id=<?= $row["ID"] ?>">Edit</a>
-                    <a class="btn btn-danger" href="../Dosen/pages/violance/deleteDosen.php?id=<?= $row["ID"] ?>" data-toggle="modal" data-target="#hapusModal<?= $row["ID"] ?>">Hapus</a>
-
+                <a class="btn btn-danger" href="../Dosen/pages/violance/deleteDosen.php?id=<?= $row["ID"] ?>" data-toggle="modal" data-target="#hapusModal<?= $row["ID"] ?>">Hapus</a>
+                    <?php if ($row["Verifikasi"] == 0): ?>
+                        <a class="btn btn-primary" href="../Dosen/pages/violance/editDosen.php?id=<?= $row["ID"] ?>">Edit</a>
+                        
+                    <?php else: ?>
+                       
+                    <?php endif; ?>
                 </td>
             </tr>
 

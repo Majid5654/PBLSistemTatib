@@ -15,7 +15,7 @@ if (!$sessionClass) {
 
 <div class="container mt-4">
     <h2>List Violance Class <?php echo htmlspecialchars($sessionClass); ?></h2>
-    <a class="btn btn-success mt-2" href="../DPA/pages/violance/createDPA.php">Tambah Data</a>
+
     <br><br>
 
     <?php
@@ -101,9 +101,14 @@ if (!$sessionClass) {
                     </td>
                     <td><?= $row["StatusVerifikasi"] == 1 ? htmlspecialchars($row["Sanksi"]) : 'Not Verified' ?></td>
                     <td>
-                        <a class="btn btn-primary" href="../DPA/pages/Violance/editDPA.php?id=<?= htmlspecialchars($row["ID"]) ?>">Edit</a>
-                        <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#hapusModal<?= htmlspecialchars($row["ID"]) ?>">Hapus</a>
-                    </td>
+                <a class="btn btn-danger" href="../DPA/pages/violance/deleteDPA.php?id=<?= $row["ID"] ?>" data-toggle="modal" data-target="#hapusModal<?= $row["ID"] ?>">Hapus</a>
+                    <?php if ($row["StatusVerifikasi"] == 0): ?>
+                        <a class="btn btn-primary" href="../DPA/pages/violance/editDPA.php?id=<?= $row["ID"] ?>">Edit</a>
+                        
+                    <?php else: ?>
+                       
+                    <?php endif; ?>
+                </td>
                 </tr>
 
                 <!-- Modal Hapus -->

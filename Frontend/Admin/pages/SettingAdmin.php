@@ -125,6 +125,12 @@
 }
 
 </style>
+<!-- Assuming you're using Bootstrap for modals and styles -->
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Updated Form with jQuery validation -->
 <div class="hero">
     <div class="left-section">
         <div class="top">
@@ -135,17 +141,12 @@
                 passion for creating with ease and love.
             </p>
 
-            <!-- New Form Section -->
-            <form action="/PBLTatib/PBLSistemTatib/Frontend/Admin/pages/changeAdmin.php" method="post" class="contact-form">
-
-                <input type="text" name="password" placeholder="New Password admin" required>
-                
-                <button type="submit" class="form-submit">Submitt</button>
-                
-            
-            </form>
-
            
+            <form action="/PBLTatib/PBLSistemTatib/Frontend/Admin/pages/changeAdmin.php" method="post" class="contact-form" id="passwordChangeForm">
+                <input type="text" name="password" placeholder="New Password" required id="newPassword">
+                <span id="passwordError" class="text-danger" style="display: none;">Password must be at least 8 characters and include letters and numbers.</span>
+                <button type="submit" class="form-submit">Submit</button>
+            </form>
         </div>
         <div class="bottom">
             <div class="icons">
@@ -159,3 +160,24 @@
 
     <img src="img/Desk.png">
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('#passwordChangeForm').submit(function(event) {
+            // Prevent form submission
+            event.preventDefault();
+            
+            // Validate password
+            var password = $('#newPassword').val();
+            var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+            if (!regex.test(password)) {
+                $('#passwordError').show();
+            } else {
+                $('#passwordError').hide();
+                // Submit form via AJAX or regular form submission
+                this.submit();
+            }
+        });
+    });
+</script>

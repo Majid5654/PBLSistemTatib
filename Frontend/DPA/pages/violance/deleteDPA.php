@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
 
         if ($stmt->execute()) {
             // Redirect setelah berhasil menghapus data
-            header("Location: /PBLSistemTatib/Frontend/Dosen/indexDosen.php?page=violance");
+            header("Location: /PBLTatib/PBLSistemTatib/Frontend/DPA/indexDPA.php?page=violance");
             exit;
         } else {
             throw new Exception("Gagal menghapus data.");

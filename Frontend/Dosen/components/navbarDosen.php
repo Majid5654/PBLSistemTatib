@@ -183,7 +183,7 @@ include('../../Backend/connect.php');
         </div>
     </div>
 
-<script>
+    <script>
     document.querySelector('.profile').addEventListener('click', function () {
         const dropdownMenu = this.querySelector('.dropdown-menu');
         dropdownMenu.style.display =

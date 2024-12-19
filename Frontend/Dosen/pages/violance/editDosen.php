@@ -34,12 +34,12 @@ if (!$mahasiswa) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Edit Data Mahasiswa</title>
+        <title>Edit Student Violance</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container mt-4">
-            <h2>Edit Data Mahasiswa</h2>
+            <h2>Edit Student Violance</h2>
 
             <form action="prosesDosen.php?aksi=edit" method="post">
                 <input type="hidden" name="ID" value="<?= $mahasiswa['ID'] ?>">

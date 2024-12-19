@@ -34,14 +34,14 @@ if (!$mahasiswa) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Edit Data Mahasiswa</title>
+        <title>Edit Student Violance</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container mt-4">
-            <h2>Edit Data Mahasiswa</h2>
-
-            <form action="prosesDosen.php?aksi=edit" method="post">
+            <h2>Edit Student Violance</h2>
+            
+            <form action="prosesDPA.php?aksi=edit" method="post">
                 <input type="hidden" name="ID" value="<?= $mahasiswa['ID'] ?>">
 
                 <div class="form-group">
@@ -85,7 +85,7 @@ if (!$mahasiswa) {
                 </div>
 
                 <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-                <a class="btn btn-secondary" href="./pages/violance/violanceDosen.php">Kembali</a>
+                <a class="btn btn-secondary" href="/PBLTatib/PBLSistemTatib/Frontend/DPA/indexDPA.php?page=violance">Kembali</a>
             </form>
         </div>
     </body>

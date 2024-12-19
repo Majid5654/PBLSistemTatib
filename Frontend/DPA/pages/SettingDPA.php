@@ -123,6 +123,7 @@
 }
 
 </style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <div class="hero">
         <div class="left-section">
             <div class="top">
@@ -132,12 +133,11 @@
                     your passion for creating with ease and love.
                 </p>
 
-                <!-- New Form Section -->
-                <form action="contact.php" method="post" class="contact-form" onsubmit="return validatePassword()">
-                    <input type="text" id="password" name="Password" placeholder="New Password" required>
-                    <span id="error-message" style="color: red; font-size: 14px;"></span>
-                    <button type="submit" class="form-submit">Submit</button>
-                </form>
+                <form action="/PBLTatib/PBLSistemTatib/Frontend/DPA/pages/changeDPA.php" method="post" class="contact-form" id="passwordChangeForm">
+                <input type="text" name="password" placeholder="New Password" required id="newPassword">
+                <span id="passwordError" class="text-danger" style="display: none;">Password must be at least 8 characters and include letters and numbers.</span>
+                <button type="submit" class="form-submit">Submit</button>
+            </form>
 
             </div>
             <div class="bottom">
@@ -154,24 +154,23 @@
     </div>
 
     <script>
-        function validatePassword() {
-            const passwordInput = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
+    $(document).ready(function() {
+        $('#passwordChangeForm').submit(function(event) {
+            // Prevent form submission
+            event.preventDefault();
+            
+            // Validate password
+            var password = $('#newPassword').val();
+            var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-            // Check if password is at least 8 characters long
-            if (passwordInput.length < 8) {
-                errorMessage.textContent = "Password must be at least 8 characters long.";
-                return false; // Prevent form submission
+            if (!regex.test(password)) {
+                $('#passwordError').show();
+            } else {
+                $('#passwordError').hide();
+                // Submit form via AJAX or regular form submission
+                this.submit();
             }
-
-            // Check if password contains at least one number
-            if (!/\d/.test(passwordInput)) {
-                errorMessage.textContent = "Password must contain numbers.";
-                return false; // Prevent form submission
-            }
-
-            errorMessage.textContent = ""; // Clear error message
-            return true; // Allow form submission
-        }
-    </script>
+        });
+    });
+</script>
 
