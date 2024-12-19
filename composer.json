@@ -1,9 +1,0 @@
-{
-    "name": "myorganization/pbl-sistem-tatib",
-    "description": "A simple PHP library for sending emails using SMTP",
-    "type": "library",
-    "require": {
-        "phpmailer/phpmailer": "^6.9"
-    },
-    "license": "MIT"
-}
