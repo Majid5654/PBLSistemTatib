@@ -366,13 +366,13 @@ body{
         <div class="form-container sign-up">
             <form id="forgot-password-form" action="../Backend/forgotPassword.php" method="POST">
                 <h1>Forgot Password</h1>
-                <span>Enter your email to receive a verification code</span>
+                <h2>Contact Admin 081359377563 </h2>
                 
                 <!-- Peringatan ditempatkan di sini -->
                 <p id="error-message" style="color: red; display: none;"></p>
                 
-                <input type="email" id="forgot-email" name="forgot-email" placeholder="Email" required>
-                <button type="submit">Send Code</button>
+                
+                
             </form>
         </div>
 

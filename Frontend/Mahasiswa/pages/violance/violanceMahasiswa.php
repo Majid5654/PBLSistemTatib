@@ -14,7 +14,7 @@ $nim = $_SESSION['nim'];
 include('../../Backend/connect.php');
 
 try {
-    // Pre-defined view (assuming it exists) with a safe query
+    //view
     $query = "SELECT * FROM vw_pelanggaran_mahasiswa
             WHERE Nama = :nama AND NIM = :nim;"; 
 

@@ -72,8 +72,8 @@
                         <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
                     </div>
                     <div class="mb-3">
-                        <label for="nim" class="form-label">NIM</label>
-                        <input type="text" class="form-control" id="nim" name="nim" placeholder="Enter your NIM">
+                        <label for="nim" class="form-label">NIP</label>
+                        <input type="text" class="form-control" id="nim" name="nim" placeholder="Enter your NIP">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>

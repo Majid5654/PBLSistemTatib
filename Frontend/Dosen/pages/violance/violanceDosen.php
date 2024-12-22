@@ -8,14 +8,14 @@
 
         include('../../Backend/connect.php'); // Pastikan path ke Connect.php benar
         
-        try {
+        try {//inner join and left join
             $query = "SELECT 
             pm.No AS PelanggaranNo,
             pm.ID,
             pm.Nama,
             pm.NIM,
             pm.Jurusan,
-            pm.Prodi,
+            pm.Prodi, 
             pm.Semester,
             s.class AS class,
             tp.Pelanggaran AS JenisPelanggaran,

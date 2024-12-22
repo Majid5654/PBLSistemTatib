@@ -22,7 +22,7 @@ try {
     </head>
     <body>
         <div class="container mt-4">
-            <h2>Tambah Data Anggota</h2>
+            <h2>Add Student Violation</h2>
 
             <form action="/PBLTatib/PBLSistemTatib/Frontend/Dosen/pages/violance/prosesDosen.php?aksi=tambah" method="post">
     <!-- Pastikan 'prosesMahasiswa.php' sesuai path -->
